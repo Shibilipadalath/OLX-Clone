@@ -1,0 +1,64 @@
+.bannerParentDiv {
+  padding-top: 4em;
+  width: 100%;
+}
+
+.bannerChildDiv {
+  width: 100%;
+}
+
+.menuBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 12px 20px;
+  background-color: #f7f7f7;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.categoryMenu span {
+  font-weight: 700;
+  color: #002f34;
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+.otherQuickOptions span {
+  padding: 6px 10px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.otherQuickOptions span:hover {
+  color: #002f34;
+  text-decoration: underline;
+}
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+  .menuBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .otherQuickOptions {
+    display: none;
+  }
+}

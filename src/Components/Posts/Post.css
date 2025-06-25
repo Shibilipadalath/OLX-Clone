@@ -1,0 +1,128 @@
+.moreView {
+  margin: 16px;
+  padding: 16px 16px 32px;
+  background-color: #ebeeef;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.heading span:first-child {
+  font-size: 24px;
+  font-weight: 600;
+  color: #002f34;
+}
+
+.heading span:last-child {
+  font-size: 14px;
+  color: #006b80;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.heading span:last-child:hover {
+  color: #0096a5;
+  text-decoration: underline;
+}
+
+.moreView .cards {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  gap: 16px;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 8px;
+  padding: 13px;
+  width: 222px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card .favorite {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card .image img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.card .content {
+  margin-top: 10px;
+}
+
+.card .content .rate {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002f34;
+}
+
+.card .content .category {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.card .content .name {
+  font-size: 13px;
+  color: #777;
+  margin-top: 2px;
+}
+
+.card .date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* Optional: Responsive tweak for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 180px;
+  }
+
+  .heading span:first-child {
+    font-size: 20px;
+  }
+
+  .card .content .rate {
+    font-size: 16px;
+  }
+}

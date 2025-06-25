@@ -1,0 +1,77 @@
+.footerParentDiv {
+  width: 100%;
+  background-color: #ebeeef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footerParentDiv .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 32px 16px;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footerParentDiv .content > div {
+  min-width: 180px;
+}
+
+.footerParentDiv .heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #002f34;
+}
+
+.footerParentDiv .list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerParentDiv .list ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #4a4a4a;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footerParentDiv .list ul li:hover {
+  color: #002f34;
+}
+
+.footerParentDiv .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #002f34;
+  color: #fff;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.footerParentDiv .footer p {
+  margin: 4px 0;
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerParentDiv .content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+
+  .footerParentDiv .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 16px;
+  }
+}
