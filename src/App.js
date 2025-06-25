@@ -1,5 +1,10 @@
 import React, { useEffect, useContext, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
 import { AuthContext, FirebaseContext } from "./store/Context";
 import Post from "./store/PostContext";
@@ -47,7 +52,10 @@ function App() {
               path="/create"
               element={user ? <Create /> : <Navigate to="/login" />}
             />
-            <Route path="/view" element={user ? <View /> : <Navigate to="/login" />} />
+            <Route
+              path="/view"
+              element={user ? <View /> : <Navigate to="/login" />}
+            />
           </Routes>
         </Router>
       </Post>
